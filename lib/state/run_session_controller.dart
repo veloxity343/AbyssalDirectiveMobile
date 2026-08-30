@@ -26,6 +26,7 @@ import '../content/events/events.dart' as events_content;
 import '../content/stats.dart' as stats_content;
 import '../engine/engine.dart';
 import '../engine/game_state.dart';
+import '../services/storage_providers.dart';
 import '../services/storage_service.dart';
 import 'run_screen.dart';
 import 'run_session_state.dart';
@@ -192,5 +193,3 @@ class RunSessionController extends StateNotifier<RunSessionState> {
 final runSessionControllerProvider = StateNotifierProvider<RunSessionController, RunSessionState>((ref) {
   return RunSessionController(ref.watch(storageServiceProvider));
 });
-
-final storageServiceProvider = Provider<StorageService>((ref) => StorageService());
