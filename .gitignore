@@ -1,0 +1,36 @@
+# Standard Flutter .gitignore — this directory predates `flutter create .`,
+# so this is here now to avoid accidentally committing build output once
+# that command generates it.
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/pubspec.lock
+
+# Platform-generated (created by `flutter create .`, not by us)
+**/ios/Flutter/.last_build_id
+**/android/gradle-wrapper.jar
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+**/ios/**/GeneratedPluginRegistrant.*
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Supabase CLI local state
+supabase/.branches/
+supabase/.temp/
+
+# Secrets — never commit real keys (AdMob, RevenueCat, Supabase service role, etc.)
+.env
+.env.*
+!.env.example
